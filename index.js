@@ -8,7 +8,7 @@ app.listen(port, () => {
     console.log(`server running on port ${port}`);
 });
 
-app.get('/home', (req, res) => {
+app.get('/index', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
@@ -16,7 +16,9 @@ app.get('/productos', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/productos.html'));
 });
 app.get('/productos/1', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/productos/1.html'));
+    res.sendFile(path.join(__dirname, 'views/productos1.html'));
 });
-
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/home.html'));
+});
 
